@@ -7,7 +7,10 @@ class RomanToNum
    end
 
    def convert(letters)
-     
+      if !(letters.is_a? String) then
+         raise StandardError.new "Incorrect input given, strings only"
+      end
+
       lettersArray = letters.split("")
       
       lettersArray.each do |x|
