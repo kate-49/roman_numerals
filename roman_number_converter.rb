@@ -1,19 +1,21 @@
 class RomanToNum
+   attr_accessor :hashvalues, :answer
+
+   def initialize()
+      @hashvalues = { "I" => 1 }
+      @answer = 0
+   end
 
    def convert(letters)
-
-      valuehash = { "I" => 1 }
-
-      answer = 0
-      input = letters.split("")
+      lettersArray = letters.split("")
       
-      input.each do |x|
-         valuehash.each do |key, value|
+      lettersArray.each do |x|
+         self.hashvalues.each do |key, value|
             if x == key
-               answer += value
+               self.answer += value
             end
          end
       end
-      return answer
+      return self.answer
    end
 end
