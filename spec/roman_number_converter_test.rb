@@ -7,8 +7,11 @@ describe RomanToNum do
         expect(converter.convert("III")).to eq(3)
     end
 
-    it "raises Errors if not given string" do
+    it "raises errors if not given string" do
         converter = RomanToNum.new
-        expect(converter.convert(55.01)).to raise_error StandardError
+        expect{converter.convert(55)}.to raise_error StandardError
+        expect{converter.convert(55.01)}.to raise_error StandardError
+        expect{converter.convert(true)}.to raise_error StandardError
+        expect{converter.convert(false)}.to raise_error StandardError
     end
 end
