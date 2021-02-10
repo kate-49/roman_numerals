@@ -7,6 +7,7 @@ class RomanToNum
    end
 
    def convert(letters)
+     
       lettersArray = letters.split("")
       
       lettersArray.each do |x|
@@ -16,6 +17,7 @@ class RomanToNum
             end
          end
       end
+
       return self.answer
    end
 end
